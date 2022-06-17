@@ -8,4 +8,4 @@ question = st.text_input('input your question')
 if st.button('answer'):
   qna = pipeline("question-answering", model="distilbert-base-cased-distilled-squad")
   answer = qa(question = question,context = context)
-  st.write(f"Answer: '{answer['answer']} \nf"Confindence: {answer['score']}")
+  st.write(f"Answer: '{answer['answer']} \nConfindence: {answer['score']}")
